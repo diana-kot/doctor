@@ -1,6 +1,9 @@
 import React from "react";
+import { format } from "date-fns";
+import ru from "date-fns/locale/ru";
 import Calendar from "react-calendar";
 import axios from "axios";
+import dayjs from "dayjs";
 
 import "react-calendar/dist/Calendar.css";
 import "./CalendarPerson.scss";
@@ -27,13 +30,15 @@ const CalendarPerson = () => {
   const [date, setDate] = React.useState(new Date());
   const [calendarEvents, setCalendarEvents] = React.useState([]);
 
+  const locale = "fr-CA";
+
   React.useEffect(() => {
     axios.get("http://localhost:3001/visitsUser").then(({ data }) => {
       setCalendarEvents(data);
     });
   }, []);
 
-  console.log(calendarEvents);
+  // console.log(calendarEvents);
 
   function isWithinRange(date, range) {
     return isWithinInterval(date, { start: range[0], end: range[1] });
@@ -43,8 +48,11 @@ const CalendarPerson = () => {
     return ranges.some((range) => isWithinRange(date, range));
   }
 
+
+
   return (
     <>
+
       <Calendar
         onChange={setDate}
         value={date}
@@ -52,9 +60,25 @@ const CalendarPerson = () => {
         selectRange={true}
         next2Label={null}
         prev2Label={null}
+        events={calendarEvents
+          // .filter((obj) =>
+          // (dayjs(obj.date).format("YYYY-MM-DD") === date)
+          .map((obj) => {
+            <li key={obj.id}>
+              <span>{obj.date}</span>
+            </li>;
+          })
+        }
+        formatDay={(date) => dayjs(date).format("YYYY-MM-DD")}
       />
-     { calendarEvents.map((obj)=> obj.date)}
-      {/* {date.length > 0 ? (
+
+      {/* <ul className="flex">
+        {calendarEvents.map((obj) => (
+          <div>{dayjs(obj.date).format("YYYY-MM-DD")}</div>
+        ))}
+      </ul> */}
+
+      {date.length > 0 ? (
         <p className="text-center">
           <span className="bold">Start:</span> {date[0].toDateString()}
           &nbsp;|&nbsp;
@@ -65,7 +89,7 @@ const CalendarPerson = () => {
           <span className="bold">Default selected date:</span>{" "}
           {date.toDateString()}
         </p>
-      )} */}
+      )}
     </>
   );
 };

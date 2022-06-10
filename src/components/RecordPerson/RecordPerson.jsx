@@ -31,7 +31,6 @@ const RecordPerson = ({
         <div className="record__wrapper">
           <div className="record__top">
             <span className="record__time">
-             {/* {date} */}
               {format(new Date(date), "EEEE dd.MM.yyyy | HH:mm", {
               locale: ru,
             })}
