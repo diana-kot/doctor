@@ -1,0 +1,17 @@
+@import "@scss/variables";
+
+.cards {
+  display: grid;
+  //   grid-gap: 22px;
+  grid-template-columns: repeat(2, 1fr);
+  padding-left: 20px;
+  padding-right: 60px;
+  padding-top: 12px;
+
+  &__item {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    
+  }
+}

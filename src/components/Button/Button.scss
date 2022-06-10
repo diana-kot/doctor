@@ -1,0 +1,23 @@
+@import "@scss/variables";
+
+.button {
+  // min-width: 150px;
+  // padding: 12px 25px;
+  height: 40px;
+  width: 150px;
+  border-radius: 5px;
+  font-weight: 500;
+  background: $purple;
+  outline: none;
+  color: $colorText;
+  transition: 0.4s;
+  line-height: 17px;
+  border: none;
+  cursor: pointer;
+  margin: 0 auto;
+}
+.button:disabled,
+.button:hover {
+  background: darken($purple, 4%);
+  cursor: pointer;
+}

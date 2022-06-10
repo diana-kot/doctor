@@ -1,0 +1,91 @@
+@import "@scss/variables";
+
+.card {
+  &__wrapper {
+    display: flex;
+    margin-bottom: 15px;
+    // margin-right: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px $purpleLight;
+
+    width: 540px;
+    height: 183px;
+
+    // &:hover {
+    //   border: 2px solid $blue;
+    // }
+  }
+
+  &__img {
+    display: flex;
+    padding: 66px 42px;
+    width: 25%;
+    // &:hover {
+    //   background-color: $blue;
+    // }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    // padding: 20px 36px 29px 36px;
+    padding-top: 20px;
+    padding-left: 36px;
+    padding-right: 36px;
+    width: 75%;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .card__text-modif {
+    &::before {
+      content: "\2022";
+      color: $blue;
+      font-weight: bold;
+      display: inline-block; /* Расстояние между точкой и текстом */
+      width: 1em; /* Задать значение расстояния */
+    }
+  }
+
+  &__title {
+    font-size: 27px;
+
+    // border-bottom: 2px solid $purpleLight;
+    // &:hover {
+    //   border-bottom: 2px solid $blue;
+    // }
+  }
+
+  &__line {
+    // margin: 20px 0;
+    padding: 0;
+    height: 0;
+    border: none;
+    border-top: 2px solid $purpleLight;
+    // &:hover {
+    //   border-top: 2px solid $blue;
+    // }
+  }
+
+  img {
+    width: 50px;
+    height: 50px;
+    &:hover {
+      border-radius: 5px 0px 0px 5px;
+      background-color: #50caff;
+    }
+  }
+}

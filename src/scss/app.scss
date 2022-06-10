@@ -1,0 +1,66 @@
+@import "variables";
+@import "normalize";
+@import "~antd/dist/antd.css";
+// @import "~bootstrap/scss/bootstrap";
+
+body {
+  height: 100%;
+  line-height: 1;
+  font-size: 14px;
+  font-weight: 400;
+  color: $colorDark;
+
+  font-family: "Rubik", sans-serif;
+}
+
+.wrapper {
+  min-height: 100%;
+  background-color: lighten($bodyColor, 9%);
+}
+
+.wrapper__container {
+  flex: 1 1 auto;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.container {
+  padding-left: calc(50% - #{$maxWidth / 2});
+  padding-right: calc(50% - #{$maxWidth / 2});
+}
+
+.title {
+  line-height: 19px;
+  color: $black;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  margin-left: 40px;
+}
+
+.simplebar-track {
+  background-color: $purpleLight;
+}
+
+.simplebar-scrollbar {
+  background-color: $darkBlue;
+  border-radius: 5px;
+  height: 174px;
+  width: 9px;
+}
+
+@media (max-width: 1023px) {
+  .container {
+    padding-left: calc(40% - #{$widthSiteSml / 2});
+    padding-right: calc(40% - #{$widthSiteSml / 2});
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

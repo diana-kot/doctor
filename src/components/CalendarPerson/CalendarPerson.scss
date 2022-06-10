@@ -1,0 +1,171 @@
+@import "@scss/variables";
+
+.react-calendar {
+  width: 573px;
+  height: 481px;
+  max-width: 100%;
+  background-color: $purpleLight;
+  border-radius: 5px;
+  border: none;
+}
+
+.react-calendar__navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $purple;
+  height: 57px;
+  margin-bottom: 10px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.react-calendar__navigation__label {
+  flex-grow: 0;
+}
+
+.react-calendar__viewContainer {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.react-calendar__navigation button {
+  color: $colorCart;
+  width: 14px;
+  background: none;
+  font-size: 19px;
+  margin-top: 8px;
+  margin-top: 0px;
+}
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  opacity: 0.5;
+  color: $purple;
+}
+.react-calendar__navigation button[disabled] {
+  background-color: #f0f0f0;
+}
+abbr[title] {
+  text-decoration: none;
+}
+/* .react-calendar__month-view__days__day--weekend {
+    color: #d10000;
+   } */
+
+.react-calendar__tile {
+  display: flex;
+  width: 79px;
+  height: 63px;
+  font-size: 20px;
+  background-color: white;
+}
+
+// .react-calendar__tile:enabled:hover,
+// .react-calendar__tile:enabled:focus {
+//   background: #f8f8fa;
+//   color: #6f48eb;
+//   border-radius: 6px;
+// }
+.react-calendar__tile--now {
+  background: $purpleLight;
+  color: $black;
+}
+// .react-calendar__tile--now:enabled:hover,
+// .react-calendar__tile--now:enabled:focus {
+//   background: #6f48eb33;
+//   border-radius: 6px;
+//   font-weight: bold;
+//   color: #6f48eb;
+// }
+// .react-calendar__tile--hasActive:enabled:hover,
+// .react-calendar__tile--hasActive:enabled:focus {
+//   background: #f8f8fa;
+// }
+.react-calendar__tile--active {
+  background: white;
+  color: #000000;
+}
+
+
+.react-calendar__tile:disabled {
+  background-color: $purpleLight;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+// .react-calendar__tile--active:enabled:hover,
+// .react-calendar__tile--active:enabled:focus {
+//   background: #6f48eb;
+//   color: white;
+// }
+.react-calendar--selectRange .react-calendar__tile--hover {
+  background-color: #f8f8fa;
+}
+.react-calendar__tile--range {
+  //   background: #f8f8fa;
+  //   color: #6f48eb;
+  //   border-radius: 0;
+}
+.react-calendar__tile--rangeStart {
+  //   border-top-right-radius: 0;
+  //   border-bottom-right-radius: 0;
+  //   border-top-left-radius: 6px;
+  //   border-bottom-left-radius: 6px;
+  //   background: #6f48eb;
+  //   color: white;
+}
+.react-calendar__tile--rangeEnd {
+  //   border-top-left-radius: 0;
+  //   border-bottom-left-radius: 0;
+  //   border-top-right-radius: 6px;
+  //   border-bottom-right-radius: 6px;
+  //   background: #6f48eb;
+  //   color: white;
+}
+
+.react-calendar__month-view__weekdays {
+  display: flex;
+
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: $black;
+}
+
+.react-calendar__navigation__label__labelText {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  // text-align: center;
+  color: $colorCart;
+}
+
+abbr[title],
+abbr[data-original-title] {
+  text-decoration: none;
+}
+
+.react-calendar__navigation__label__labelText,
+.react-calendar__navigation__label__labelText--from {
+  flex-grow: 0;
+  max-width: 20px;
+}
+
+button.react-calendar__navigation__label {
+  flex-grow: 0;
+}
+
+// <button aria-label="" class="react-calendar__navigation__label" type="button" style="flex-grow: 1;"><span class="react-calendar__navigation__label__labelText react-calendar__navigation__label__labelText--from">апрель 2022 г.</span></button>
+
+* {
+  flex-grow: 0;
+}
+
+button {
+  flex-grow: 0;
+}
