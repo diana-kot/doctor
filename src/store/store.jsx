@@ -2,10 +2,13 @@ import { createStore, applyMiddleware, compose, combineReducers } from "redux";
 import thunk from "redux-thunk";
 
 import { visitsDoctorReducer } from "./VisitsDoctors/reducers";
+import { cardsReducer } from "./CardsInfo/reducers";
+
 
 
 const rootReducer = combineReducers({
   visits: visitsDoctorReducer,
+  cards: cardsReducer
   
 });
 

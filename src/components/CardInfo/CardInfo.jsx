@@ -16,8 +16,10 @@ const Card = ({
     <>
       <div className="card">
         <div className="card__wrapper">
+          <div className="card__wrapper-img">
           <div className="card__img">
             <img src={img} alt={"cardInfo"} />
+          </div>
           </div>
           <div className="card__content">
             <h3 className="card__title">{title}</h3>

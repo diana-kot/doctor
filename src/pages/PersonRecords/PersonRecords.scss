@@ -33,8 +33,7 @@
   font-weight: 400;
   font-size: 16px;
   // background: url(../../assets/img/arrow.svg) no-repeat;
-
-  transition: 0.2s all;
+    transition: 0.2s all;
   &:hover,
   &:focus {
     // background: url(../../assets/img/arrow.svg) no-repeat;
@@ -42,8 +41,12 @@
     color: $blue;
   }
 
+  &:hover svg {
+    fill: $purple;
+  }
+
   &::before {
-    content: url(../../assets/img/arrow.svg);
+    // content: url(../../assets/img/arrow.svg);
     margin-right: 14px;
     display: block;
   }

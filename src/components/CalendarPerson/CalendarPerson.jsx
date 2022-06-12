@@ -48,11 +48,11 @@ const CalendarPerson = () => {
     return ranges.some((range) => isWithinRange(date, range));
   }
 
-
+  const d = dayjs(date).format("YYYY-MM-DD");
+  console.log(d);
 
   return (
     <>
-
       <Calendar
         onChange={setDate}
         value={date}
@@ -60,25 +60,27 @@ const CalendarPerson = () => {
         selectRange={true}
         next2Label={null}
         prev2Label={null}
-        events={calendarEvents
-          // .filter((obj) =>
-          // (dayjs(obj.date).format("YYYY-MM-DD") === date)
-          .map((obj) => {
-            <li key={obj.id}>
-              <span>{obj.date}</span>
-            </li>;
-          })
-        }
-        formatDay={(date) => dayjs(date).format("YYYY-MM-DD")}
+        // events={calendarEvents
+        //   // .filter((obj) =>
+        //   // (dayjs(obj.date).format("YYYY-MM-DD") === date)
+        //   .map((obj) => {
+        //     <li key={obj.id}>
+        //       <span>{obj.date}</span>
+        //     </li>;
+        //   })}
+        // formatDay={(date) => dayjs(date).format("YYYY-MM-DD")}
       />
 
-      {/* <ul className="flex">
-        {calendarEvents.map((obj) => (
-          <div>{dayjs(obj.date).format("YYYY-MM-DD")}</div>
-        ))}
-      </ul> */}
+      <ul className="flex">
+        {calendarEvents.filter((obj) => {
+          <li>
+            {dayjs(obj.date).format("YYYY-MM-DD") ==
+              date}
+          </li>;
+        })}
+      </ul>
 
-      {date.length > 0 ? (
+      {/* {date.length > 0 ? (
         <p className="text-center">
           <span className="bold">Start:</span> {date[0].toDateString()}
           &nbsp;|&nbsp;
@@ -89,7 +91,7 @@ const CalendarPerson = () => {
           <span className="bold">Default selected date:</span>{" "}
           {date.toDateString()}
         </p>
-      )}
+      )} */}
     </>
   );
 };

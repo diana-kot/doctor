@@ -52,15 +52,17 @@
     transition: background-color 0.15s ease-in-out;
 
     &:hover {
-      //   opacity: 0.2;
       background-color: $colorText;
       color: $purple;
     }
 
-    svg:hover path {
+    &:hover svg path {
       fill: $purple;
+    }
+
+    &:hover img  {
+      filter: grayscale(blue);
+      // background: blue;
     }
   }
 }
-
-
