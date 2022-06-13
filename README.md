@@ -1,4 +1,4 @@
-# React Shop Pizza
+# React 
 
 ## Скрипты
 ```bash
