@@ -32,11 +32,11 @@ const CalendarPerson = () => {
 
   const locale = "fr-CA";
 
-  React.useEffect(() => {
-    axios.get("http://localhost:3001/visitsUser").then(({ data }) => {
-      setCalendarEvents(data);
-    });
-  }, []);
+  // React.useEffect(() => {
+  //   axios.get("http://localhost:3001/visitsUser").then(({ data }) => {
+  //     setCalendarEvents(data);
+  //   });
+  // }, []);
 
   // console.log(calendarEvents);
 

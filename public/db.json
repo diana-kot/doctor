@@ -1,7 +1,7 @@
 {
   "visitsUser": [
     {
-      "id": 0,
+      "id": "0",
       "date": "2022-06-10T15:41:00.001Z",
       "img": "https://esadocs.com/media/images/providers/StockDoc.jpg",
       "doctorName": "Харьков В. С.",
@@ -10,7 +10,7 @@
       "hospitalAdress": "пр. Солидарности, д. 1, к. 1, лит. А"
     },
     {
-      "id": 1,
+      "id": "1",
       "date": "2022-06-15T15:41:00.001Z",
       "img": "https://nogostop.ru/wp-content/uploads/2021/02/logo-fb-1.png",
       "doctorName": "Малушко Т. Н.",
@@ -19,7 +19,7 @@
       "hospitalAdress": "пр. Солидарности, д. 1, к. 1, лит. А"
     },
     {
-      "id": 2,
+      "id": "2",
       "date": "2022-06-30T15:41:00.001Z",
       "img": "https://esadocs.com/media/images/providers/StockDoc.jpg",
       "doctorName": "Харьков В. С.",
@@ -28,7 +28,7 @@
       "hospitalAdress": "пр. Солидарности, д. 1, к. 1, лит. А"
     },
     {
-      "id": 3,
+      "id": "3",
       "date": "2022-07-02T15:41:00.001Z",
       "img": "https://nogostop.ru/wp-content/uploads/2021/02/logo-fb-1.png",
       "doctorName": "Малушко Т. Н.",
@@ -37,7 +37,7 @@
       "hospitalAdress": "пр. Солидарности, д. 1, к. 1, лит. А"
     },
     {
-      "id": 4,
+      "id": "4",
       "date": "2022-07-14T15:41:00.001Z",
       "img": "https://esadocs.com/media/images/providers/StockDoc.jpg",
       "doctorName": "Харьков В. С.",
@@ -46,7 +46,16 @@
       "hospitalAdress": "пр. Солидарности, д. 1, к. 1, лит. А"
     },
     {
-      "id": 5,
+      "id": "5",
+      "date": "2022-06-14T15:41:00.001Z",
+      "img": "https://esadocs.com/media/images/providers/StockDoc.jpg",
+      "doctorName": "Харьков В. С.",
+      "department": "Терапевтическое отделение",
+      "hospitalName": "СПБ ГБУЗ 'Городская поликлиника №25'",
+      "hospitalAdress": "пр. Солидарности, д. 1, к. 1, лит. А"
+    },
+    {
+      "id": "6",
       "date": "2022-06-14T15:41:00.001Z",
       "img": "https://esadocs.com/media/images/providers/StockDoc.jpg",
       "doctorName": "Харьков В. С.",
@@ -58,7 +67,7 @@
   
   "cards": [
     {
-      "id": 0,
+      "id": "0",
       "img": "./assets/img/inform.svg",
       "title": "Информация о пациенте",
       "text": "Ваши личные данные",
@@ -66,19 +75,19 @@
       "text_three": "История болезней"
     },
     {
-      "id": 1,
+      "id": "1",
       "img": "./assets/img/lab.svg",
       "title": "Результаты анализов",
       "text": "Вы можете узнать здесь результаты своих анализов"
     },
     {
-      "id": 2,
+      "id": "2",
       "img": "./assets/img/add.svg",
       "title": "Добавить  информацию",
       "text": "Добавляйте в свою электронную медицинскую карту новые данные"
     },
     {
-      "id": 3,
+      "id": "3",
       "img": "./assets/img/clock.svg",
       "title": "История приемов",
       "text": "Вся информация о полученных услугах за все время хранится здесь"

@@ -1,5 +1,4 @@
-import { SET_VISITS, SET_LOADED } from "./actions";
-
+import { SET_VISITS, SET_LOADED, REMOVE_VISIT } from "./actions";
 
 export const visitState = {
   visits: [],
@@ -22,6 +21,13 @@ export const visitsDoctorReducer = (state = visitState, action) => {
         ...state,
         isLoaded: action.payload,
       };
+
+    case REMOVE_VISIT:
+      return {
+        ...state,
+        visits: state.visits.filter(visit => visit.id !== action.payload)
+      };
+
     default:
       return state;
   }

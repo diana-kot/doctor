@@ -1,7 +1,9 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { format } from "date-fns";
 import ru from "date-fns/locale/ru";
 
+import { fetchRemoveVisit } from "@store/VisitsDoctors/actions";
 import Button from "../Button";
 
 import "./RecordPerson.scss";
@@ -16,13 +18,15 @@ const RecordPerson = ({
   hospitalAdress,
   doctorName,
   department,
-  
 }) => {
+  const dispatch = useDispatch();
+  const cards = useSelector(({ cards }) => cards.cards);
 
-
-
-  const notVisit = () => {
-    onRemove(id);
+  const onRemoveVisit = () => {
+    if (window.confirm("Вы действительно хотите отменить запись?")) {
+      console.log(id);
+      dispatch(fetchRemoveVisit(id));
+    }
   };
 
   return (
@@ -32,8 +36,8 @@ const RecordPerson = ({
           <div className="record__top">
             <span className="record__time">
               {format(new Date(date), "EEEE dd.MM.yyyy | HH:mm", {
-              locale: ru,
-            })}
+                locale: ru,
+              })}
             </span>
             <span className="record__name">{hospitalName}</span>
             <span className="record__name">{hospitalAdress}</span>
@@ -53,7 +57,7 @@ const RecordPerson = ({
               </div>
             </div>
             <Button
-              onClick={notVisit}
+              onClick={onRemoveVisit}
               className={"record__button"}
               text="Отменить"
             ></Button>

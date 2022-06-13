@@ -11,13 +11,13 @@ function App() {
       <div>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route index  element={<Profile />} />
-            <Route path="doctors" element={<p>doctors</p>} />
-            <Route path="messages" element={<p>messages</p>} />
-            <Route path="test" element={<p>test</p>} />
-            <Route path="important" element={<p>important</p>} />
-            <Route path="help" element={<p>help</p>} />
-            <Route index path="/profile/visits" element={<PersonRecords />} />
+            <Route path="/"  element={<Profile />} />
+            <Route path="/doctors" element={<p>doctors</p>} />
+            <Route path="/messages" element={<p>messages</p>} />
+            <Route path="/test" element={<p>test</p>} />
+            <Route path="/important" element={<p>important</p>} />
+            <Route path="/help" element={<p>help</p>} />
+            <Route index path="/visits" element={<PersonRecords />} />
             <Route path="*" element={<h2>404</h2>} />
           </Route>
         </Routes>

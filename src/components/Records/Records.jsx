@@ -8,7 +8,7 @@ import { Spin, Space } from "antd";
 
 import "./Records.scss";
 
-const Records = ({ totalCountRecords}) => {
+const Records = ({ totalCountRecords }) => {
   const dispatch = useDispatch();
   const visits = useSelector(({ visits }) => visits.visits);
   const isLoaded = useSelector(({ visits }) => visits.isLoaded);
@@ -21,10 +21,17 @@ const Records = ({ totalCountRecords}) => {
     <>
       {isLoaded ? (
         <>
-          {visits &&
+         {/* {visits &&
             visits
               .slice(0, totalCountRecords)
-              .map((obj) => <RecordPerson key={obj.id} {...obj} />)}
+              .map((obj) => <RecordPerson key={obj.id} {...obj} />)} */}
+          {visits.length > 0 ? (
+            visits
+              .slice(0, totalCountRecords)
+              .map((obj) => <RecordPerson key={obj.id} {...obj} />)
+          ) : (
+            <p className="title">У Вас нет записей</p>
+          )}
         </>
       ) : (
         <div className="records__spin">
