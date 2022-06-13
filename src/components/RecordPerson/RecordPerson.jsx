@@ -11,8 +11,6 @@ import "./RecordPerson.scss";
 const RecordPerson = ({
   date,
   id,
-  className,
-  onRemove,
   img,
   hospitalName,
   hospitalAdress,
